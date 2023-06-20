@@ -5,19 +5,23 @@ public class Search_Insert_Position {
     //What is the position of an Element in a sorted Array, or where would it be if it is not in there.
     public static <T extends Number> Integer search_Intert_Position(T[] array, T element){
         int result = array.length/2;
+        int range = array.length/4;
         int memory = 0;
-        int i = 4;
+
         while(result != memory){
             if(element.equals(array[result])){
                 return result;
-            } else if(compare(element, array[result])){
+            } else if(compare(array[result], element)){
                 memory = result;
-                result += array.length/i;
+                result += range;
             } else {
                 memory = result;
-                result -= array.length/i;
+                result -= range;
             }
-            i *= i;
+            range /= 2;
+        }
+        if(compare(array[result], element)){ //important for binary search
+            result++;
         }
         return result;
     }
