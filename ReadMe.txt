@@ -8,9 +8,9 @@ generic methode, I implemented as such.
 Furthermore the following Methodes follow the following:
 
 -[9 Summary Ranges, 10 Missing Ranges, 11 Merge Intervals, 12 Insert Intervals]:
-    They all use the self made Class "Intervals". I created this class myself to
+    They all use the selfmade Class "Intervals". I created this class myself to
     do this tasks. You can find this class under "Helpers/Interval.java".
-    Furthermore I implemented an Comperator for it.
+    Furthermore, I implemented a Comperator for it.
 -[23 Shortest Word Distance I, 25 Shortest Word Distance III]:
     Due to its similarity I just implemented both in one Methode. "Shortest Word Distance".
 -[24 Shortest Word Distance II]
@@ -24,6 +24,9 @@ Furthermore the following Methodes follow the following:
     It is implemented in the method XSum_Shortest. You can additional do it with every amount of elements.
 -[35 Longest Common Prefix]
     I don't understand the problem. Therefor I didn't solved it yet.
-[38 Median of two sorted Arrays]
+-[38 Median of two sorted Arrays]
     It is wrong. I've to do it another time again.
-
+-[39 Find Minimum in Rotated Sorted Array II, 40 Find Minimum in Rotated Sorted Array II]
+    They are put together in one method.
+-[41 Find_First_and_Last_Position_of_Element_in_Sorted_Array]
+    It uses the Interval class.
