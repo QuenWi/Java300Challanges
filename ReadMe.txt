@@ -1,4 +1,7 @@
 
+In the package Helpers, are some scripts used for the test-files.
+The scripts in there are not used for the tasks, with only a few exceptions.
+
 All the methodes which are makes sense to create as an
 generic methode, I implemented as such.
 
@@ -18,7 +21,9 @@ Furthermore the following Methodes follow the following:
     I implemented them all in one. The method is XSum. You can there find the sum
     of any amount of elements.
 -[32 3Sum Closest]
-    It is implemented in the method XSum_Shortest.
+    It is implemented in the method XSum_Shortest. You can additional do it with every amount of elements.
 -[35 Longest Common Prefix]
-    I don't understand the problem.
+    I don't understand the problem. Therefor I didn't solved it yet.
+[38 Median of two sorted Arrays]
+    It is wrong. I've to do it another time again.
 
