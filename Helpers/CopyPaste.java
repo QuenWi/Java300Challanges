@@ -150,6 +150,8 @@ public class CopyPaste {
         return result;
     }
 
+
+    //Old Versions, worse
     /*private static <T extends Number> T sum(T nr1, T nr2){
         Float f = 0f;
         Double d = 0d;
