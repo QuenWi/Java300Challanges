@@ -2,8 +2,9 @@
 In the package Helpers, are some scripts used for the test-files.
 The scripts in there are not used for the tasks, with only a few exceptions.
 
-All the methodes which are makes sense to create as an
+All the methodes which are makes sense to create as a
 generic methode, I implemented as such.
+Furthermore, most of the methods can be copy and pasted by themself into other projects.
 
 Furthermore the following Methodes follow the following:
 
@@ -28,5 +29,7 @@ Furthermore the following Methodes follow the following:
     It is wrong. I've to do it another time again.
 -[39 Find Minimum in Rotated Sorted Array II, 40 Find Minimum in Rotated Sorted Array II]
     They are put together in one method.
--[41 Find_First_and_Last_Position_of_Element_in_Sorted_Array]
+-[41 Find First and Last Position of Element in Sorted_Array]
     It uses the Interval class.
+-[44 Search in Rotated Sorted Array, 45 Search in Rotated Sorted Array II]
+    It uses the Interval class. Furthermore, they are put together in one method.
