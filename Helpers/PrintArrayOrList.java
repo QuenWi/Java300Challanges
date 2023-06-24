@@ -25,6 +25,27 @@ public class PrintArrayOrList {
         return "[]";
     }
 
+    public static<T> String arrayMatrixToString(T[][] array){
+        if(array == null){
+            return "null";
+        }
+        if(array.length > 0){
+            String s = "[";
+            boolean first = true;
+            for(T[] item : array){
+                if(first){
+                    first = false;
+                    s += PrintArrayOrList.arrayToString(item);
+                } else{
+                    s += ", " + PrintArrayOrList.arrayToString(item);
+                }
+            }
+            s += "]";
+            return s;
+        }
+        return "[]";
+    }
+
     public static String listToString(List<?> list){
         if(list == null){
             return "null";
