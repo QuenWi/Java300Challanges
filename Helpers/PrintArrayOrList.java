@@ -46,7 +46,7 @@ public class PrintArrayOrList {
         return "[]";
     }
 
-    public static String listToString(List<?> list){
+    public static <T> String listToString(List<T> list){
         if(list == null){
             return "null";
         }
@@ -59,6 +59,28 @@ public class PrintArrayOrList {
                     s += item.toString();
                 } else{
                     s += ", " + item.toString();
+                }
+            }
+            s += "]";
+            return s;
+        }
+        return "[]";
+    }
+
+
+    public static <T> String listMatrixToString(List<List<T>> list){
+        if(list == null){
+            return "null";
+        }
+        if(list.size() > 0){
+            String s = "[";
+            boolean first = true;
+            for(List<T> item : list){
+                if(first){
+                    first = false;
+                    s += PrintArrayOrList.listToString(item);
+                } else{
+                    s += ", " + PrintArrayOrList.listToString(item);
                 }
             }
             s += "]";
