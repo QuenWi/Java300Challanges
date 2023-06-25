@@ -33,3 +33,6 @@ Furthermore the following Methodes follow the following:
     It uses the Interval class.
 -[44 Search in Rotated Sorted Array, 45 Search in Rotated Sorted Array II]
     It uses the Interval class. Furthermore, they are put together in one method.
+-[49 HIndex, 50 HIndex II]
+    They are put together in one method.
+
