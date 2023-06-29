@@ -7,7 +7,6 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
-        //33
 
         List<Interval<Integer>> list = new ArrayList<Interval<Integer>>();
         list.add(new Interval<Integer>(11, 2));
