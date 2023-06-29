@@ -11,8 +11,11 @@ public class Test_First_Bad_Version {
                 array[i] = new Version(true);
             }
         }
+        test(array);
+    }
+
+    private static void test(Version[] array){
         Integer result = First_Bad_Version.first_Bad_Version(array);
         System.out.println("Result: " + result.toString());
-
     }
 }

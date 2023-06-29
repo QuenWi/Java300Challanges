@@ -20,11 +20,11 @@ public class Test_Group_Shifted_Strings {
         list.add("lmnoq");
         list.add("lmnop");
         List<List<String>> result = Group_Shifted_Strings.group_Shifted_Strings(list);
+        test(list);
+    }
 
-        for(List<String> l : result){
-            System.out.println(PrintArrayOrList.listToString(l));
-        }
-
+    private static void test(List<String> list){
+        List<List<String>> result = Group_Shifted_Strings.group_Shifted_Strings(list);
         System.out.println("Given: " + PrintArrayOrList.listToString(list));
         System.out.println("Result: " + PrintArrayOrList.listMatrixToString(result));
     }

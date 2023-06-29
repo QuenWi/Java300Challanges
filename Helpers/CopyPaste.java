@@ -5,24 +5,6 @@ public class CopyPaste {
     //change back function; parameter (E, Float)
     //if E float, than return e.toFloat, if double return double...
 
-    private static <T extends Number> T floatToGenericType(T nr1, float value2){
-        Float value = value2;
-        if(nr1 instanceof Float){
-            return (T)(Number) (value);
-        } else if(nr1 instanceof Double){
-            return (T)(Number) (value.doubleValue());
-        } else if(nr1 instanceof Integer){
-            return (T)(Number) (value.intValue());
-        } else if(nr1 instanceof Long){
-            return (T)(Number) (value.longValue());
-        } else if(nr1 instanceof Byte){
-            return (T)(Number) (value.byteValue());
-        } else if(nr1 instanceof Short){
-            return (T)(Number) (value.shortValue());
-        }
-        return null;
-    }
-
     private static <T extends Number> T sum(T nr1, T nr2){
         if(nr1 instanceof Float){
             return (T)(Number) (nr1.floatValue() + nr2.floatValue());
@@ -150,6 +132,24 @@ public class CopyPaste {
         return result;
     }
 
+    //Not good, because it can lead to small calculation mistakes
+    /*private static <T extends Number> T floatToGenericType(T nr1, float value2){
+        Float value = value2;
+        if(nr1 instanceof Float){
+            return (T)(Number) (value);
+        } else if(nr1 instanceof Double){
+            return (T)(Number) (value.doubleValue());
+        } else if(nr1 instanceof Integer){
+            return (T)(Number) (value.intValue());
+        } else if(nr1 instanceof Long){
+            return (T)(Number) (value.longValue());
+        } else if(nr1 instanceof Byte){
+            return (T)(Number) (value.byteValue());
+        } else if(nr1 instanceof Short){
+            return (T)(Number) (value.shortValue());
+        }
+        return null;
+    }*/
 
     //Old Versions, worse
     /*private static <T extends Number> T sum(T nr1, T nr2){

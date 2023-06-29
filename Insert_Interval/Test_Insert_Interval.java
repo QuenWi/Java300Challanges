@@ -20,13 +20,14 @@ public class Test_Insert_Interval {
         list.add(new Interval<Double>(11d, 12d));
         list.sort(new Interval_Sort());
         Interval<Double> interval = new Interval<Double>(4d, 9d);
-        //Interval<Double> interval = new Interval<Double>(0d, 12d); //Test 2
-        //Interval<Double> interval = new Interval<Double>(20d, 100d); //Test 3
+        test(list, interval);
+    }
+
+    private static void test(List<Interval<Double>> list, Interval<Double> interval){
         List<Interval<Double>> result = Insert_Interval.insert_Intervals(list, interval);
 
         System.out.println("Given: " + Interval.listToString(list));
         System.out.println("Insert: " + interval.toString());
         System.out.println("Result: " + Interval.listToString(result));
-
     }
 }

@@ -18,6 +18,11 @@ public class Test_Merge_Intervals {
         list.add(new Interval<Float>(4.2f, 4.2f));
         list.add(new Interval<Float>(4.6f, 5f));
         list.add(new Interval<Float>(4.8f, 5.1f));
+
+        test(list);
+    }
+
+    private static void test(List<Interval<Float>> list){
         List<Interval<Float>> result = Merge_Intervals.merge_Intervals(list);
 
         System.out.println("List: " + Interval.listToString(list));

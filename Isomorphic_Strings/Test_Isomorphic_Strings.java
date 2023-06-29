@@ -5,14 +5,15 @@ import java.util.HashMap;
 public class Test_Isomorphic_Strings {
 
     public static void main(String[] args) {
-        String string1 = "Do something.";
-        String string2 = "The huge code";
-        //String string2 = "abcdbefghijkl";
-        Boolean result = Isomorphic_Strings.isomorphic_Strings(string1, string2, true);
-        Boolean result2 = Isomorphic_Strings.isomorphic_Strings(string1, string2, false);
+        test("Do something.", "The huge code", true);
+        test("Do something.", "The huge code", false);
+        test("Do something.", "abcdbefghijkl", true);
+    }
+
+    private static void test(String string1, String string2, boolean surjectiv){
+        Boolean result = Isomorphic_Strings.isomorphic_Strings(string1, string2, surjectiv);
 
         System.out.println("Given: \"" + string1 + "\" and \"" + string2 + "\"");
-        System.out.println("Result surjectiv: " + result);
-        System.out.println("Result not surjectiv: " + result2);
+        System.out.println("Result surjectiv " + surjectiv + ": " + result);
     }
 }

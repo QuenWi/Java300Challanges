@@ -5,7 +5,10 @@ import Helpers.PrintArrayOrList;
 public class Test_Partition_Labels {
 
     public static void main(String[] args) {
-        String string = "aabceabfcuiioimnnnmt";
+        test("aabceabfcuiioimnnnmt");
+    }
+
+    private static void test(String string){
         Integer[] result = Partition_Labels.partition_Labels(string);
 
         System.out.println("Given: " + string);
