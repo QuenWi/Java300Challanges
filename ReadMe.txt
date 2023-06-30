@@ -37,6 +37,8 @@ Furthermore the following Methodes follow the following:
     They are put together in one method.
 -[56 Two Sum]
     Implemented in XSum Method.
+-[63 Substring with Concatenation of All Words]
+    I implemented it wrong. I'll repeat it later.
 
 
 
