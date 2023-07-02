@@ -2,9 +2,6 @@ package Helpers;
 
 public class CopyPaste {
 
-    //change back function; parameter (E, Float)
-    //if E float, than return e.toFloat, if double return double...
-
     private static <T extends Number> T sum(T nr1, T nr2){
         if(nr1 instanceof Float){
             return (T)(Number) (nr1.floatValue() + nr2.floatValue());
