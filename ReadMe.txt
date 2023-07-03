@@ -39,6 +39,8 @@ Furthermore the following Methodes follow the following:
     Implemented in XSum Method.
 -[63 Substring with Concatenation of All Words]
     I implemented it wrong. I'll repeat it later.
+-[69 Majority Element II]
+    I skipped this task.
 
 
 
