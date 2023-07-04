@@ -129,6 +129,10 @@ public class CopyPaste {
         return result;
     }
 
+
+    //copy an array of a generic Type
+    //result = (T[]) (Array.newInstance(array.getClass().getComponentType(), array.length));
+
     //Not good, because it can lead to small calculation mistakes
     /*private static <T extends Number> T floatToGenericType(T nr1, float value2){
         Float value = value2;
@@ -147,6 +151,7 @@ public class CopyPaste {
         }
         return null;
     }*/
+
 
     //Old Versions, worse
     /*private static <T extends Number> T sum(T nr1, T nr2){
