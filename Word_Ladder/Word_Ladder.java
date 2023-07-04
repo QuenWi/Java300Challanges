@@ -1,10 +1,6 @@
 package Word_Ladder;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class Word_Ladder {
 
@@ -12,7 +8,7 @@ public class Word_Ladder {
     //to get from one word to another? (ABC - > ABD -> AED - > FED = 4)
     public static Integer word_Ladder(String[] array, String start, String end){
         Integer result = null;
-        ArrayList<String> list = new ArrayList<>(Arrays.stream(array).toList());
+        HashSet<String> list = new HashSet<>(Arrays.stream(array).toList());
         list.add(end);
         //dykestar
         HashMap<String, Integer> hashMap = new HashMap<>();
