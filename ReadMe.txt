@@ -30,7 +30,7 @@ Furthermore the following Methodes follow the following:
 -[39 Find Minimum in Rotated Sorted Array II, 40 Find Minimum in Rotated Sorted Array II]
     They are put together in one method.
 -[41 Find First and Last Position of Element in Sorted_Array]
-    It uses the Interval class.
+    It uses the Interval class. (See first note)
 -[44 Search in Rotated Sorted Array, 45 Search in Rotated Sorted Array II]
     It uses the Interval class. Furthermore, they are put together in one method.
 -[49 HIndex, 50 HIndex II]
@@ -41,6 +41,6 @@ Furthermore the following Methodes follow the following:
     I implemented it wrong. I'll repeat it later.
 -[69 Majority Element II]
     I skipped this task.
-
-
+[75 Meeting Rooms II, 76 Meeting Rooms]
+    It uses the Interval class. (See first note)
 

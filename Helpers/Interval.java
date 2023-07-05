@@ -14,6 +14,11 @@ public class Interval<E extends Number>{
         this.bottomLimit = bottomLimit;
     }
 
+    public Interval(Interval<E> obj) {
+        this.topLimit = obj.getTopLimit();
+        this.bottomLimit = obj.getBottomLimit();
+    }
+
     public boolean includes(E obj){
         boolean result = false;
         if(bottomLimit instanceof Float){
@@ -60,42 +65,54 @@ public class Interval<E extends Number>{
         boolean result = false;
         if(bottomLimit instanceof Float){
             if(obj.getBottomLimit().floatValue() <= topLimit.floatValue() && obj.getBottomLimit().floatValue() >= bottomLimit.floatValue()
-            || obj.getTopLimit().floatValue() <= topLimit.floatValue() && obj.getTopLimit().floatValue() >= bottomLimit.floatValue()){
+            || obj.getTopLimit().floatValue() <= topLimit.floatValue() && obj.getTopLimit().floatValue() >= bottomLimit.floatValue()
+                    || obj.getBottomLimit().floatValue() <= bottomLimit.floatValue() && obj.getTopLimit().floatValue() >= topLimit.floatValue()
+                    || getBottomLimit().floatValue() <= obj.bottomLimit.floatValue() && getTopLimit().floatValue() >= obj.topLimit.floatValue()){
                 return true;
             } else{
                 return false;
             }
         } else if(bottomLimit instanceof Double){
             if(obj.getBottomLimit().doubleValue() <= topLimit.doubleValue() && obj.getBottomLimit().doubleValue() >= bottomLimit.doubleValue()
-                    || obj.getTopLimit().doubleValue() <= topLimit.doubleValue() && obj.getTopLimit().doubleValue() >= bottomLimit.doubleValue()){
+                    || obj.getTopLimit().doubleValue() <= topLimit.doubleValue() && obj.getTopLimit().doubleValue() >= bottomLimit.doubleValue()
+                    || obj.getBottomLimit().doubleValue() <= bottomLimit.doubleValue() && obj.getTopLimit().doubleValue() >= topLimit.doubleValue()
+                    || getBottomLimit().doubleValue() <= obj.bottomLimit.doubleValue() && getTopLimit().doubleValue() >= obj.topLimit.doubleValue()){
                 return true;
             } else{
                 return false;
             }
         } else if(bottomLimit instanceof Integer){
             if(obj.getBottomLimit().intValue() <= topLimit.intValue() && obj.getBottomLimit().intValue() >= bottomLimit.intValue()
-                    || obj.getTopLimit().intValue() <= topLimit.intValue() && obj.getTopLimit().intValue() >= bottomLimit.intValue()){
+                    || obj.getTopLimit().intValue() <= topLimit.intValue() && obj.getTopLimit().intValue() >= bottomLimit.intValue()
+                    || obj.getBottomLimit().intValue() <= bottomLimit.intValue() && obj.getTopLimit().intValue() >= topLimit.intValue()
+                    || getBottomLimit().intValue() <= obj.bottomLimit.intValue() && getTopLimit().intValue() >= obj.topLimit.intValue()){
                 return true;
             } else{
                 return false;
             }
         } else if(bottomLimit instanceof Long){
             if(obj.getBottomLimit().longValue() <= topLimit.longValue() && obj.getBottomLimit().longValue() >= bottomLimit.longValue()
-                    || obj.getTopLimit().longValue() <= topLimit.longValue() && obj.getTopLimit().longValue() >= bottomLimit.longValue()){
+                    || obj.getTopLimit().longValue() <= topLimit.longValue() && obj.getTopLimit().longValue() >= bottomLimit.longValue()
+                    || obj.getBottomLimit().longValue() <= bottomLimit.longValue() && obj.getTopLimit().longValue() >= topLimit.longValue()
+                    || getBottomLimit().longValue() <= obj.bottomLimit.longValue() && getTopLimit().longValue() >= obj.topLimit.longValue()){
                 return true;
             } else{
                 return false;
             }
         } else if(bottomLimit instanceof Byte){
             if(obj.getBottomLimit().byteValue() <= topLimit.byteValue() && obj.getBottomLimit().byteValue() >= bottomLimit.byteValue()
-                    || obj.getTopLimit().byteValue() <= topLimit.byteValue() && obj.getTopLimit().byteValue() >= bottomLimit.byteValue()){
+                    || obj.getTopLimit().byteValue() <= topLimit.byteValue() && obj.getTopLimit().byteValue() >= bottomLimit.byteValue()
+                    || obj.getBottomLimit().byteValue() <= bottomLimit.byteValue() && obj.getTopLimit().byteValue() >= topLimit.byteValue()
+                    || getBottomLimit().byteValue() <= obj.bottomLimit.byteValue() && getTopLimit().byteValue() >= obj.topLimit.byteValue()){
                 return true;
             } else{
                 return false;
             }
         } else if(bottomLimit instanceof Short){
             if(obj.getBottomLimit().shortValue() <= topLimit.shortValue() && obj.getBottomLimit().shortValue() >= bottomLimit.shortValue()
-                    || obj.getTopLimit().shortValue() <= topLimit.shortValue() && obj.getTopLimit().shortValue() >= bottomLimit.shortValue()){
+                    || obj.getTopLimit().shortValue() <= topLimit.shortValue() && obj.getTopLimit().shortValue() >= bottomLimit.shortValue()
+                    || obj.getBottomLimit().shortValue() <= bottomLimit.shortValue() && obj.getTopLimit().shortValue() >= topLimit.shortValue()
+                    || getBottomLimit().shortValue() <= obj.bottomLimit.shortValue() && getTopLimit().shortValue() >= obj.topLimit.shortValue()){
                 return true;
             } else{
                 return false;

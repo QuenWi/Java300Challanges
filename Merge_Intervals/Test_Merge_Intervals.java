@@ -17,6 +17,7 @@ public class Test_Merge_Intervals {
         list.add(new Interval<Float>(4f, 4.5f));
         list.add(new Interval<Float>(4.2f, 4.2f));
         list.add(new Interval<Float>(4.6f, 5f));
+        list.add(new Interval<Float>(4.7f, 4.9f));
         list.add(new Interval<Float>(4.8f, 5.1f));
 
         test(list);
