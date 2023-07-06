@@ -43,4 +43,7 @@ Furthermore the following Methodes follow the following:
     I skipped this task.
 [75 Meeting Rooms II, 76 Meeting Rooms]
     It uses the Interval class. (See first note)
+[77 Range Addition]
+    I don't understand the task.
+[]
 
