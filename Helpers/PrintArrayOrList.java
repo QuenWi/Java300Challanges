@@ -14,9 +14,17 @@ public class PrintArrayOrList {
             for(T item : array){
                 if(first){
                     first = false;
-                    s += item.toString();
+                    if(item == null){
+                        s += "null";
+                    } else{
+                        s += item.toString();
+                    }
                 } else{
-                    s += ", " + item.toString();
+                    if(item == null){
+                        s += ", null";
+                    } else{
+                        s += ", " + item.toString();
+                    }
                 }
             }
             s += "]";
@@ -56,9 +64,17 @@ public class PrintArrayOrList {
             for(Object item : list){
                 if(first){
                     first = false;
-                    s += item.toString();
+                    if(item == null){
+                        s += "null";
+                    } else{
+                        s += item.toString();
+                    }
                 } else{
-                    s += ", " + item.toString();
+                    if(item == null){
+                        s += ", null";
+                    } else{
+                        s += ", " + item.toString();
+                    }
                 }
             }
             s += "]";
