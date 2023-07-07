@@ -12,7 +12,7 @@ public class Test_Contains_Duplicate_II {
     private static void test(Byte[] array, Integer distance){
         Boolean result = Contains_Duplicate_II.contains_Duplicate_II(array, distance);
 
-        System.out.println("Given: " + PrintArrayOrList.arrayToString(array));
+        System.out.println("Given: " + PrintArrayOrList.arrayToString(array) + " and " + distance);
         System.out.println("Result: " + result.toString());
     }
 }

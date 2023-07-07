@@ -87,6 +87,23 @@ public class CopyPaste {
         return null;
     }
 
+    private static <T extends Number> T absolute(T nr){
+        if(nr instanceof Float){
+            return (T)(Number) (Math.abs(nr.floatValue()));
+        } else if(nr instanceof Double){
+            return (T)(Number) (Math.abs(nr.doubleValue()));
+        } else if(nr instanceof Integer){
+            return (T)(Number) (Math.abs(nr.intValue()));
+        } else if(nr instanceof Long){
+            return (T)(Number) (Math.abs(nr.longValue()));
+        } else if(nr instanceof Byte){
+            return (T)(Number) (Math.abs(nr.byteValue()));
+        } else if(nr instanceof Short){
+            return (T)(Number) (Math.abs(nr.shortValue()));
+        }
+        return null;
+    }
+
     public static <T extends Number> boolean compare(T nr1, T nr2){
         boolean result = false;
         if(nr1 instanceof Float){
