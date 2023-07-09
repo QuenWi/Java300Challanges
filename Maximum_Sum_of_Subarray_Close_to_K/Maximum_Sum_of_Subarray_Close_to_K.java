@@ -1,27 +1,24 @@
-package Max_Sum_of_Rectangle_No_Larger_Than_K;
+package Maximum_Sum_of_Subarray_Close_to_K;
 
-public class Max_Sum_of_Rectangle_No_Larger_Than_K {
+public class Maximum_Sum_of_Subarray_Close_to_K {
 
-    //Which combination of 4 numbers is the closest/under the wanted sum. It returns their sum.
-    public static <T extends Number> T max_Sum_of_Rectangle_No_Larger_Than_K(T[][] matrix, T wanted){
-        T result = (T) (Number) 0; //I think that this could become a problem.
+    //What continues subarray is the closest but smaller (or euqual) than k?
+    public static <T extends Number> T maximum_Sum_of_Subarray_Close_to_K(T[] array, T max){
+        T result = array[0];
         T memory;
-        for(int i = 0; i < matrix.length-1; i++){
-            for(int j = i+1; j < matrix.length; j++){ //Goes through all coloums
-                for(int k = 0; k < matrix[i].length-1; k++){
-                    for(int l = k+1; l < matrix[i].length; l++){ //Goes through all combination of 2 numbers
-                        memory = sum(matrix[i][k], matrix[i][l]);
-                        memory = sum(memory, matrix[j][k]);
-                        memory = sum(memory, matrix[j][l]);
-                        if(memory.equals(wanted)){
-                            /*System.out.println(String.format("i: %s, j: %s, k: %s, l: %s", i, j, k, l));
-                            System.out.println(String.format("1: %s, 2: %s, 3: %s, 4: %s",
-                                    matrix[i][k], matrix[i][l], matrix[j][k], matrix[j][l]));*/
-                            return wanted;
-                        } else if(compare(result, memory) && compare(memory, wanted)){
-                            result = memory;
-                        }
-                    }
+        for(int i = 0; i < array.length; i++){
+            memory = null;
+            for(int j = i; j < array.length; j++){
+                if(memory == null){
+                    memory = array[j];
+                } else{
+                    memory = sum(memory, array[j]);
+                }
+                if(memory.equals(max)){
+                    return max;
+                }
+                if(compare(memory, max) && compare(result, memory)){
+                    result = memory;
                 }
             }
         }
@@ -86,5 +83,4 @@ public class Max_Sum_of_Rectangle_No_Larger_Than_K {
         }
         return result;
     }
-
 }
