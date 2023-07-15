@@ -106,6 +106,23 @@ public class CopyPaste {
         return null;
     }
 
+    private static <T extends Number> T square(T nr){
+        if(nr instanceof Float){
+            return (T)(Number) ((Double)(Math.sqrt(nr.doubleValue()))).floatValue();
+        } else if(nr instanceof Double){
+            return (T)(Number) ((Double)(Math.sqrt(nr.doubleValue()))).doubleValue();
+        } else if(nr instanceof Integer){
+            return (T)(Number) ((Double)(Math.sqrt(nr.doubleValue()))).intValue();
+        } else if(nr instanceof Long){
+            return (T)(Number) ((Double)(Math.sqrt(nr.doubleValue()))).longValue();
+        } else if(nr instanceof Byte){
+            return (T)(Number) ((Double)(Math.sqrt(nr.doubleValue()))).byteValue();
+        } else if(nr instanceof Short){
+            return (T)(Number) ((Double)(Math.sqrt(nr.doubleValue()))).shortValue();
+        }
+        return null;
+    }
+
     public static <T extends Number> boolean compare(T nr1, T nr2){
         boolean result = false;
         if(nr1 instanceof Float){
