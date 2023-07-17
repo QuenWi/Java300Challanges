@@ -23,14 +23,14 @@ public class Ugly_Number_II {
                 list.add(k);
                 k+=5;
             }
-            while(list.contains(i)){
-                i+=2;
-            }
-            while(list.contains(j)){
-                j+=3;
-            }
-            while(list.contains(k)){
+            if(i==k){
                 k+=5;
+            }
+            if(j==k){
+                k+=5;
+            }
+            if(i==j){
+                j+=3;
             }
         }
         return list.get(list.size()-1);
