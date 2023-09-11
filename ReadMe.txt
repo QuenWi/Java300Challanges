@@ -45,5 +45,6 @@ Furthermore the following Methodes follow the following:
     It uses the Interval class. (See first note)
 [77 Range Addition]
     I don't understand the task.
-[]
+[103 Rotate Array in Java]
+    This task exists two times in the document.
 
