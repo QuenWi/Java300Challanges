@@ -47,4 +47,6 @@ Furthermore the following Methodes follow the following:
     I don't understand the task.
 [103 Rotate Array in Java]
     This task exists two times in the document.
+[109 Queue Reconstruction by Height]
+    I don't understand this task.
 
