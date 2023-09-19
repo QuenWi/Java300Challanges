@@ -51,4 +51,5 @@ Furthermore the following Methodes follow the following:
     I don't understand this task.
 [113 Design Snake Game]
     It would not fit good in here.
-
+[115 Most Stones Removed with Same Row or Column]
+    I don't understand this task.
