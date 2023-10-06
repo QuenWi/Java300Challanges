@@ -22,7 +22,7 @@ public class Test_Word_Search {
     private static void test(Character[][] matrix, String string){
         Boolean result = Word_Search.word_Search(matrix, string);
 
-        System.out.println("Given: " + string + " and " + PrintArrayOrList.arrayMatrixToString(matrix));
+        System.out.println("Given: " + string + " and " + PrintArrayOrList.arrayMapAsMatrixToString(matrix));
         System.out.println("Result: " + result.toString());
     }
 }

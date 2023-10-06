@@ -54,6 +54,27 @@ public class PrintArrayOrList {
         return "[]";
     }
 
+    public static<T> String arrayMapAsMatrixToString(T[][] array){
+        if(array == null){
+            return "null";
+        }
+        if(array.length > 0){
+            String s = "[\n";
+            boolean first = true;
+            for(T[] item : array){
+                if(first){
+                    first = false;
+                    s += PrintArrayOrList.arrayToString(item);
+                } else{
+                    s += ",\n" + PrintArrayOrList.arrayToString(item);
+                }
+            }
+            s += "\n]";
+            return s;
+        }
+        return "[]";
+    }
+
     public static <T> String listToString(List<T> list){
         if(list == null){
             return "null";

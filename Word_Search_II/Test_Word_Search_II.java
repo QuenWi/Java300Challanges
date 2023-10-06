@@ -19,7 +19,7 @@ public class Test_Word_Search_II {
     private static void test(Character[][] matrix, String[] words){
         Boolean[] result = Word_Search_II.word_Search_II(matrix, words);
 
-        System.out.println(String.format("Given: %S and %s", PrintArrayOrList.arrayToString(words), PrintArrayOrList.arrayMatrixToString(matrix)));
+        System.out.println(String.format("Given: %S and %s", PrintArrayOrList.arrayToString(words), PrintArrayOrList.arrayMapAsMatrixToString(matrix)));
         System.out.println("Result: " + PrintArrayOrList.arrayToString(result));
     }
 }
