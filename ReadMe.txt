@@ -55,5 +55,5 @@ Furthermore the following Methodes follow the following:
     I don't understand this task.
 [120 Number of Islands]
     This task exists two times in the document.
-
-    
+[123 Valid Sudoku]
+    This task very similar to [122 Sudoku Solver]. Just as output a boolean and not the sudoku solved.
