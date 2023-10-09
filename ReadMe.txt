@@ -57,3 +57,5 @@ Furthermore the following Methodes follow the following:
     This task exists two times in the document.
 [123 Valid Sudoku]
     This task very similar to [122 Sudoku Solver]. Just as output a boolean and not the sudoku solved.
+[123 Walls and Gates]
+    The describtion of the task is missing. So I don't know what to do.
