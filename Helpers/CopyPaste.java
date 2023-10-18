@@ -214,6 +214,7 @@ public class CopyPaste {
 
     //copy an array of a generic Type
     //result = (T[]) (Array.newInstance(array.getClass().getComponentType(), array.length));
+    //T[][] result = (T[][]) Array.newInstance(matrix[0][0].getClass(), matrix.length, matrix.length);
 
     //Not good, because it can lead to small calculation mistakes
     /*private static <T extends Number> T floatToGenericType(T nr1, float value2){
