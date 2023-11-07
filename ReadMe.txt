@@ -61,3 +61,5 @@ Furthermore the following Methodes follow the following:
     The describtion of the task is missing. So I don't know what to do.
 [138 Linked List Cycle, 139 Copy List with Random Pointer, 145 Intersection of Two Linked Lists]
     I have to create an own class (collection/container) for this tasks.
+[150 Reverse Double Linked List]
+    This task is done by 148 Reverse Linked List.
