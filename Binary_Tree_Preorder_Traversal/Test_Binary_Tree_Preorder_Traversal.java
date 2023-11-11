@@ -16,7 +16,8 @@ public class Test_Binary_Tree_Preorder_Traversal {
     private static void test(BinaryTreeNode<Integer> binaryTreeNode){
         List<Integer> result = Binary_Tree_Preorder_Traversal.binary_Tree_Preorder_Traversal(binaryTreeNode);
 
+        System.out.println("Given: ");
         BinaryTreeNode_AsList.printBinaryTree(binaryTreeNode);
-        System.out.println(PrintArrayOrList.listToString(result));
+        System.out.println("Result: " + PrintArrayOrList.listToString(result));
     }
 }
