@@ -21,8 +21,8 @@ public class BinaryTreeNode_AsList {
                     addToList.add(null);
                     addToList.add(null);
                 } else{
-                    addToList.add(checkNods.get(i).rightBranch);
                     addToList.add(checkNods.get(i).leftBranch);
+                    addToList.add(checkNods.get(i).rightBranch);
                 }
             }
             checkNods = new ArrayList<>();
@@ -74,7 +74,6 @@ public class BinaryTreeNode_AsList {
 
     public static <Integer> void printBinaryTree(BinaryTreeNode<Integer> headNode){
         List<Integer> treeAsList = binaryTreeNode_AsList(headNode);
-        System.out.println(PrintArrayOrList.listToString(treeAsList));
         int i = 1;
         int j = 1;
         int floors = 1;
