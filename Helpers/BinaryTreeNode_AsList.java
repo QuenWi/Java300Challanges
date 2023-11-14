@@ -72,6 +72,33 @@ public class BinaryTreeNode_AsList {
         return list.get(0);
     }
 
+    public static BinaryTreeNode<Integer> createRandomBinarySearchTree(int size, int minValue, int maxValue){
+        Random random = new Random();
+        List<BinaryTreeNode<Integer>> list = new ArrayList<>();
+        list.add(new BinaryTreeNode<Integer>(random.nextInt(minValue, maxValue+1)));
+        System.out.println("createRandomBinarySearchTree  is  not correct implemented yet!!");
+        int memory;
+        for(int i = 1; i < size; i++){
+            BinaryTreeNode<Integer> newNode = new BinaryTreeNode<Integer>(random.nextInt(minValue, maxValue+1));
+            while (true){
+                memory = random.nextInt(0, list.size());
+                if(50 < random.nextInt(0, 101)){
+                    if(list.get(memory).leftBranch == null){
+                        list.get(memory).leftBranch = newNode;
+                        break;
+                    }
+                } else{
+                    if(list.get(memory).rightBranch == null){
+                        list.get(memory).rightBranch = newNode;
+                        break;
+                    }
+                }
+            }
+            list.add(newNode);
+        }
+        return list.get(0);
+    }
+
     public static <Integer> void printBinaryTree(BinaryTreeNode<Integer> headNode){
         List<Integer> treeAsList = binaryTreeNode_AsList(headNode);
         int i = 1;

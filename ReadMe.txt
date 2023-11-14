@@ -65,3 +65,20 @@ Furthermore the following Methodes follow the following:
     This task is done by 148 Reverse Linked List.
 [155 Plus One Linked List]
     I don't understand this task.
+[156 Binary Tree Preorder Traversal, 157 Binary Tree Inorder Traversal, 158 Binary Tree Postorder Traversal,
+    159 Binary Tree Level Order Traversal, 160 Binary Tree Level Order Traversal II, 161 Binary Tree Vertical Order Traversal,
+    162 Invert Binary Tree, 163 Kth Smallest Element in a BST, 164 Binary Tree Longest Consecutive Sequence,
+    165 Validate Binary Search Tree, 166 Flatten Binary Tree to Linked List, 167 Path Sum, 168 Path Sum II,
+    169 Construct Binary Tree from Inorder and Postorder Traversal, 170 Construct Binary Tree from Preorder and Inorder Traversal,
+    171 Convert Sorted Array to Binary Search Tree, 172 Convert Sorted List to Binary Search Tree, 173 Minimum Depth of Binary Tree,
+    174 Binary Tree Maximum Path Sum, 175 Balanced Binary Tree, 176 Symmetric Tree, 177 Binary Search Tree Iterator,
+    178 Binary Tree Right Side View, 179 Lowest Common Ancestor of a Binary Search Tree, 180 Lowest Common Ancestor of a Binary Tree,
+    181 Most Frequent Subtree Sum, 182 Verify Preorder Serialization of a Binary Tree, 183 Populating Next Right Pointers in Each Node,
+    184 Populating Next Right Pointers in Each Node II, 185 Unique Binary Search Trees, 186 Unique Binary Search Trees II,
+    187 Sum Root to Leaf Numbers, 188 Count Complete Tree Nodes, 189 Closest Binary Search Tree Value, 190 Binary Tree Paths,
+    191 Maximum Depth of Binary Tree, 192 Recover Binary Search Tree, 193 Same Tree, 194 Serialize and Deserialize Binary Tree,
+    195 Inorder Successor in BST, 196 Inorder Successor in BST II, 197 Find Leaves of Binary Tree,
+    198 Largest BST Subtree, 199 Implement Trie (Prefix Tree)]:
+    They all use the selfmade Class "BinaryTreeNode". I created this class myself to do this tasks.
+    You can find this class under "Helpers/Interval.java".
+    Furthermore, I implemented a BinaryTreeNode_AsList for creating Binary Trees and BST, aswell for printing them.
