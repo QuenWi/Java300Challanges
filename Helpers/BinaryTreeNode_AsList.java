@@ -72,31 +72,14 @@ public class BinaryTreeNode_AsList {
         return list.get(0);
     }
 
-    public static BinaryTreeNode<Integer> createRandomBinarySearchTree(int size, int minValue, int maxValue){
+    public static BinaryTreeNode<Integer> createRandomBinarySearchTree(int startValue, int endValue, int minJump, int maxJump){
+        List<Integer> list = new ArrayList<>();
         Random random = new Random();
-        List<BinaryTreeNode<Integer>> list = new ArrayList<>();
-        list.add(new BinaryTreeNode<Integer>(random.nextInt(minValue, maxValue+1)));
-        System.out.println("createRandomBinarySearchTree  is  not correct implemented yet!!");
-        int memory;
-        for(int i = 1; i < size; i++){
-            BinaryTreeNode<Integer> newNode = new BinaryTreeNode<Integer>(random.nextInt(minValue, maxValue+1));
-            while (true){
-                memory = random.nextInt(0, list.size());
-                if(50 < random.nextInt(0, 101)){
-                    if(list.get(memory).leftBranch == null){
-                        list.get(memory).leftBranch = newNode;
-                        break;
-                    }
-                } else{
-                    if(list.get(memory).rightBranch == null){
-                        list.get(memory).rightBranch = newNode;
-                        break;
-                    }
-                }
-            }
-            list.add(newNode);
+        for(int i = startValue; i < endValue; i += random.nextInt(minJump, maxJump)){
+            list.add(i);
         }
-        return list.get(0);
+        BinaryTreeNode<Integer> result = createBST(list);
+        return result;
     }
 
     public static <Integer> void printBinaryTree(BinaryTreeNode<Integer> headNode){
@@ -160,5 +143,27 @@ public class BinaryTreeNode_AsList {
     public static void main(String[] args) {
         BinaryTreeNode<Integer> head = createRandomBinaryTree(10, 1, 100);
         printBinaryTree(head);
+    }
+
+    //-----------------------------------------------------------------------------------------------------------
+
+    private static <T> BinaryTreeNode<T> createBST(List<T> subList){
+        int halfIndex = subList.size()/2;
+        BinaryTreeNode<T> newNode = new BinaryTreeNode<>(subList.get(halfIndex));
+        if(halfIndex != 0 && halfIndex != 1){
+            newNode.leftBranch = createBST(cutList(subList, 0, halfIndex-1));
+            newNode.rightBranch = createBST(cutList(subList, halfIndex+1, subList.size()-1));
+        } else if (subList.size() == 2){
+            newNode.leftBranch = createBST(cutList(subList, 0, halfIndex-1));
+        }
+        return newNode;
+    }
+
+    private static <T> List<T> cutList(List<T> list, int from, int to){
+        List<T> result = new ArrayList<>();
+        for(int i = from; i <= to; i++){
+            result.add(list.get(i));
+        }
+        return result;
     }
 }

@@ -1,6 +1,8 @@
 package Helpers;
 
+import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.List;
 
 public class CopyPaste {
 
@@ -210,6 +212,14 @@ public class CopyPaste {
             };
         }
         return null;
+    }
+
+    private static <T> List<T> cutList(List<T> list, int from, int to){
+        List<T> result = new ArrayList<>();
+        for(int i = from; i <= to; i++){
+            result.add(list.get(i));
+        }
+        return result;
     }
 
     //copy an array of a generic Type
