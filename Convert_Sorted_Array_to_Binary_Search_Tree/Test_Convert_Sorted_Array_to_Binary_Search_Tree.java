@@ -11,18 +11,14 @@ import java.util.Random;
 public class Test_Convert_Sorted_Array_to_Binary_Search_Tree {
 
     public static void main(String[] args) {
-        List<Integer> list = new ArrayList<>();
-        Random random = new Random();
-        for(int i = 0; i < 100; i += random.nextInt(1, 15)){
-            list.add(i);
-        }
-        test(list);
+        Integer[] array = {1, 3, 5, 6, 8, 9, 10, 12};
+        test(array);
     }
 
-    private static void test(List<Integer> list){
-        BinaryTreeNode<Integer> result = Convert_Sorted_Array_to_Binary_Search_Tree.convert_Sorted_Array_to_Binary_Search_Tree(list);
+    private static void test(Integer[] array){
+        BinaryTreeNode<Integer> result = Convert_Sorted_Array_to_Binary_Search_Tree.convert_Sorted_Array_to_Binary_Search_Tree(array);
 
-        System.out.println("Given: " + PrintArrayOrList.listToString(list));
+        System.out.println("Given: " + PrintArrayOrList.arrayToString(array));
         System.out.println("Result: ");
         BinaryTreeNode_AsList.printBinaryTree(result);
     }

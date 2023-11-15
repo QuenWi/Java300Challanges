@@ -1,17 +1,14 @@
-package Convert_Sorted_Array_to_Binary_Search_Tree;
+package Convert_Sorted_List_to_Binary_Search_Tree;
 
 import Helpers.BinaryTreeNode;
-import Helpers.PrintArrayOrList;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
-public class Convert_Sorted_Array_to_Binary_Search_Tree {
+public class Convert_Sorted_List_to_Binary_Search_Tree {
 
     //Convert a sorted list into a BST
-    public static <T> BinaryTreeNode<T> convert_Sorted_Array_to_Binary_Search_Tree(T[] array){
-        List<T> list = Arrays.stream(array).toList();
+    public static <T> BinaryTreeNode<T> convert_Sorted_List_to_Binary_Search_Tree(List<T> list){
         BinaryTreeNode<T> result = createTree(list);
         return result;
     }

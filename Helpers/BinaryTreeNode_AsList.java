@@ -150,10 +150,10 @@ public class BinaryTreeNode_AsList {
     private static <T> BinaryTreeNode<T> createBST(List<T> subList){
         int halfIndex = subList.size()/2;
         BinaryTreeNode<T> newNode = new BinaryTreeNode<>(subList.get(halfIndex));
-        if(halfIndex != 0 && halfIndex != 1){
+        if(subList.size() > 2){
             newNode.leftBranch = createBST(cutList(subList, 0, halfIndex-1));
             newNode.rightBranch = createBST(cutList(subList, halfIndex+1, subList.size()-1));
-        } else if (subList.size() == 2){
+        } else if (subList.size() > 1){
             newNode.leftBranch = createBST(cutList(subList, 0, halfIndex-1));
         }
         return newNode;
