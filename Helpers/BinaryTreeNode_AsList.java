@@ -48,11 +48,21 @@ public class BinaryTreeNode_AsList {
 
     public static BinaryTreeNode<Integer> createRandomBinaryTree(int size, int minValue, int maxValue){
         Random random = new Random();
+
+        List<Integer> values = new ArrayList<>();
+        for(int i = 0; i < size; i++){
+            int newValue = random.nextInt(minValue, maxValue+1);
+            if(!values.contains(newValue)){
+                values.add(newValue);
+            } else{
+                i--;
+            }
+        }
         List<BinaryTreeNode<Integer>> list = new ArrayList<>();
-        list.add(new BinaryTreeNode<Integer>(random.nextInt(minValue, maxValue+1)));
+        list.add(new BinaryTreeNode<Integer>(values.get(0)));
         int memory;
         for(int i = 1; i < size; i++){
-            BinaryTreeNode<Integer> newNode = new BinaryTreeNode<Integer>(random.nextInt(minValue, maxValue+1));
+            BinaryTreeNode<Integer> newNode = new BinaryTreeNode<Integer>(values.get(i));
             while (true){
                 memory = random.nextInt(0, list.size());
                 if(50 < random.nextInt(0, 101)){
