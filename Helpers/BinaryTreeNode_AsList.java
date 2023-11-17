@@ -75,7 +75,7 @@ public class BinaryTreeNode_AsList {
     public static BinaryTreeNode<Integer> createRandomBinarySearchTree(int startValue, int endValue, int minJump, int maxJump){
         List<Integer> list = new ArrayList<>();
         Random random = new Random();
-        for(int i = startValue; i < endValue; i += random.nextInt(minJump, maxJump)){
+        for(int i = startValue; i < endValue; i += random.nextInt(minJump, maxJump+1)){
             list.add(i);
         }
         BinaryTreeNode<Integer> result = createBST(list);
