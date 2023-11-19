@@ -11,8 +11,8 @@ public class Test_Kth_Smallest_Element_in_a_BST {
         test(headNode, 3);
     }
 
-    private static <T extends Number> void test(BinaryTreeNode<T> headNode, Integer getKthSmallest){
-        T result = Kth_Smallest_Element_in_a_BST.kth_Smallest_Element_in_a_BST(headNode, getKthSmallest);
+    private static void test(BinaryTreeNode<Integer> headNode, Integer getKthSmallest){
+        Integer result = Kth_Smallest_Element_in_a_BST.kth_Smallest_Element_in_a_BST(headNode, getKthSmallest);
 
         System.out.println("Given: ");
         BinaryTreeNode_AsList.printBinaryTree(headNode);

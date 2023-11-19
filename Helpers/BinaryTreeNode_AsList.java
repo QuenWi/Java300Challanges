@@ -92,7 +92,7 @@ public class BinaryTreeNode_AsList {
         return result;
     }
 
-    public static <Integer> void printBinaryTree(BinaryTreeNode<Integer> headNode){
+    public static void printBinaryTree(BinaryTreeNode<Integer> headNode){
         List<Integer> treeAsList = binaryTreeNode_AsList(headNode);
         int i = 1;
         int j = 1;
@@ -150,9 +150,36 @@ public class BinaryTreeNode_AsList {
         }
     }
 
+    public static BinaryTreeNode<Integer> createPerfectBinaryTree(int floors){
+        BinaryTreeNode<Integer> headNode = new BinaryTreeNode<>(1);
+        List<BinaryTreeNode<Integer>> currentFloor = new ArrayList<>();
+        currentFloor.add(headNode);
+        List<BinaryTreeNode<Integer>> newFloor;
+
+        int counter = 2;
+        for(int i = 1; i < floors; i++){
+            newFloor = new ArrayList<>();
+            for(BinaryTreeNode<Integer> node : currentFloor){
+                BinaryTreeNode<Integer> leftNode = new BinaryTreeNode<>(counter);
+                counter++;
+                BinaryTreeNode<Integer> rightNode = new BinaryTreeNode<>(counter);
+                counter++;
+                node.leftBranch = leftNode;
+                node.rightBranch = rightNode;
+                newFloor.add(leftNode);
+                newFloor.add(rightNode);
+            }
+            currentFloor = newFloor;
+        }
+        return headNode;
+    }
+
     public static void main(String[] args) {
         BinaryTreeNode<Integer> head = createRandomBinaryTree(10, 1, 100);
         printBinaryTree(head);
+
+        BinaryTreeNode<Integer> headNode = createPerfectBinaryTree(4);
+        printBinaryTree(headNode);
     }
 
     //-----------------------------------------------------------------------------------------------------------
