@@ -174,6 +174,26 @@ public class BinaryTreeNode_AsList {
         return headNode;
     }
 
+    public static BinaryTreeNode<Integer> createNiceSearchBinaryTree(int floors){
+        List<Integer> counter = new ArrayList<>();
+        counter.add(1);
+        BinaryTreeNode<Integer> headNode = createNiceSearchBinaryTreeRekursive(floors, 1, counter);
+        return headNode;
+    }
+
+    public static BinaryTreeNode<Integer> createNiceSearchBinaryTreeRekursive(int floors, int currentFloor, List<Integer> counter){
+        BinaryTreeNode<Integer> node = new BinaryTreeNode<>(0);
+        if(floors - 1 >=  currentFloor){
+            node.leftBranch = createNiceSearchBinaryTreeRekursive(floors, currentFloor+1, counter);
+        }
+        node.value = counter.get(0);
+        counter.set(0, counter.get(0)+1);
+        if(floors - 1 >=  currentFloor){
+            node.rightBranch = createNiceSearchBinaryTreeRekursive(floors, currentFloor+1, counter);
+        }
+        return node;
+    }
+
     public static void main(String[] args) {
         BinaryTreeNode<Integer> head = createRandomBinaryTree(10, 1, 100);
         printBinaryTree(head);
