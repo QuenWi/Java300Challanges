@@ -78,7 +78,9 @@ Furthermore the following Methodes follow the following:
     187 Sum Root to Leaf Numbers, 188 Count Complete Tree Nodes, 189 Closest Binary Search Tree Value, 190 Binary Tree Paths,
     191 Maximum Depth of Binary Tree, 192 Recover Binary Search Tree, 193 Same Tree, 194 Serialize and Deserialize Binary Tree,
     195 Inorder Successor in BST, 196 Inorder Successor in BST II, 197 Find Leaves of Binary Tree,
-    198 Largest BST Subtree, 199 Implement Trie (Prefix Tree)]:
+    198 Largest BST Subtree]:
     They all use the selfmade Class "BinaryTreeNode". I created this class myself to do this tasks.
     You can find this class under "Helpers/Interval.java".
     Furthermore, I implemented a BinaryTreeNode_AsList for creating Binary Trees and BST, aswell for printing them.
+[196 Inorder Successor in BST II]
+    skiped it
