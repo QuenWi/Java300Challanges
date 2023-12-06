@@ -84,3 +84,5 @@ Furthermore the following Methodes follow the following:
     Furthermore, I implemented a BinaryTreeNode_AsList for creating Binary Trees and BST, aswell for printing them.
 [196 Inorder Successor in BST II]
     skiped it
+[200 Add and Search Word Data structure design]
+    Already implemented it in 199.
