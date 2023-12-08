@@ -14,6 +14,5 @@ public class Test_Longest_Substring_Without_Repeating_Characters {
 
         System.out.println("Given: " + string);
         System.out.println("Result: " + result.toString());
-
     }
 }
