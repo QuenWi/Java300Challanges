@@ -86,3 +86,5 @@ Furthermore the following Methodes follow the following:
     skiped it
 [200 Add and Search Word Data structure design]
     Already implemented it in 199.
+[211 Max Chunks To Make Sorted]
+    I don't understand this task.
