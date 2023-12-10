@@ -88,3 +88,6 @@ Furthermore the following Methodes follow the following:
     Already implemented it in 199.
 [211 Max Chunks To Make Sorted]
     I don't understand this task.
+[213 Mini Parser, 214 Flatten Nested List Iterator, 215 Nested List Weight Sum, 216 Nested List Weight Sum II]
+    I don't understand this task.
+
